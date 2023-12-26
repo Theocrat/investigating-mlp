@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layer 1 weights evolution</title>
+
+    <script type="text/javascript">
+        var image = null
+        var frame = null
+
+        function start() {
+            image = document.querySelector("img.weights")
+            grads = document.querySelector("img.grads")
+            frame = document.querySelector("#frame")
+        }
+        function updateHeatmap() {
+            image.setAttribute("src", `weights/${frame.value}.png`)
+            grads.setAttribute("src", `grads/${frame.value}.png`)
+        }
+    </script>
+</head>
+<body onload="start()">
+    <input type="range" min="1" max="100" value="1" style="width:100%"
+           id="frame" onchange="updateHeatmap()"/>
+    <table>
+        <tr>
+            <td>
+                <img src="weights/1.png" height="480px" width="360px" 
+                     class="weights"></img>
+            </td>
+            <td>
+                <img src="grads/1.png" height="480px" width="360px" 
+                     class="grads"></img>
+            </td>
+            <td>
+                <img src="losses.png" height="480px" width="100%"></img>
+            </td>
+        </tr>
+        <tr>
+            <td style="text-align:center;">Layer 1 Weights</td>
+            <td style="text-align:center;">Layer 2 Weights</td>
+            <td style="text-align:center;">Loss Decay vs Epochs</td>
+        </tr>
+    </table>
+</body>
+</html>
