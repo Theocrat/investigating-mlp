@@ -61,8 +61,10 @@ details are available
     [X] Build the HTML tool for investigating (investigate.html)
 
 [ ] Build the actual software
-    [ ] Build the main training code (main.py)
-    [ ] Build the HTML tool for investigating (investigate.html)
-    [ ] Build the relevant Javascript files for the HTML tool
-    [ ] Build the relevant CSS for the HTML tool
+    [.] Build the main training code (main.py)
+    [.] Build the HTML tool for investigating (investigate.html)
+    [.] Build the relevant Javascript files for the HTML tool
+    [.] Build the relevant CSS for the HTML tool
+
+* The dot above means it has only been implemented for Input Layer
 ```
