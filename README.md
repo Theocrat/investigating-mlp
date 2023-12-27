@@ -2,6 +2,8 @@
 
 ```yml
 Project Status: Functional for Input Layer only, with shoddy UX
+
+TODO: Decide on a much better color-scheme for the heatmap
 ```
 
 The Multi-Layered Perceptron (MLP), is the simplest type of neural network, at

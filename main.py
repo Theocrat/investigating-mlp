@@ -63,7 +63,9 @@ plt.clf()
 plt.grid()
 plt.plot(range(NUM_EPOCHS), losses, color="#d46")
 plt.fill_between(range(NUM_EPOCHS), [0] * NUM_EPOCHS, losses, color="#d463")
-plt.tight_layout()
+plt.xlabel("Number of Epochs")
+plt.ylabel("Cross Entropy Loss")
+# plt.tight_layout()
 plt.savefig("losses.png")
 
 with open("weights/l1.js", "w") as f:
