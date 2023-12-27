@@ -2,14 +2,16 @@ import torch
 from torch.utils.data import Dataset
 from sklearn.datasets import load_iris
 from sklearn.model_selection import train_test_split
+from sklearn.preprocessing import MinMaxScaler
 
 class Iris(Dataset):
     """ Dataset class for Scikit-Learn Iris dataset """
 
     def __init__(self):
         """ Initialize the dataset class with the data from Scikit-Learn """
+        self.scaler = MinMaxScaler()
         self.iris = load_iris()
-        self.data = self.iris["data"]
+        self.data = self.scaler.fit_transform(self.iris["data"])
         self.labels = self.iris["target"]
 
     def __len__(self):

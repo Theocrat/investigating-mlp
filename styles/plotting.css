@@ -1,0 +1,13 @@
+rect.heat-block {
+    stroke-width: 0;
+}
+
+rect.heat-block:hover {
+    filter: opacity(0.4);
+}
+
+td.hover-stats {
+    font-family: mono;
+    background: #cba;
+    text-align: center;
+}

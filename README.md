@@ -1,7 +1,7 @@
 # Investigating MLP
 
 ```yml
-Project Status: Proof of Concept stage
+Project Status: Functional for Input Layer only, with shoddy UX
 ```
 
 The Multi-Layered Perceptron (MLP), is the simplest type of neural network, at
